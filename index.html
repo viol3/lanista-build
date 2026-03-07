@@ -27,11 +27,11 @@
 	
       const hideFullScreenButton = "true";
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/afa9a6712184e0fbc26381d1b42787d8.loader.js";
+      const loaderUrl = buildUrl + "/0cbe0e1f5b4d42ff93327c77efbee2c2.loader.js";
       const config = {
-        dataUrl: buildUrl + "/4f6b99c9554ab0e8c82a5370fc8c22f9.data.br",
-        frameworkUrl: buildUrl + "/c570198a462dacbfe8f63d3cff145fbe.framework.js.br",
-        codeUrl: buildUrl + "/4274571007df18f932371c79ed012ec4.wasm.br",
+        dataUrl: buildUrl + "/4d6820d5fd858729e1bfe7f8036baa22.data.br",
+        frameworkUrl: buildUrl + "/464e74851cbc8ee29bf5ef6af36e6084.framework.js.br",
+        codeUrl: buildUrl + "/8ac6cc3c5078ee3e53abbef1f7832184.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "KLIK",
         productName: "Lanista",
@@ -118,6 +118,26 @@
   function LoadJsonGameData(jsonData) //Comes from frontend, goes to game
   {
     window.MyGameInstance.SendMessage("LanistaAPI", "LoadJsonGameData", jsonData);
+  }
+
+  function ThrowObjectToPlayer1(objectIndex) //Comes from frontend, goes to game
+  {
+    window.MyGameInstance.SendMessage("LanistaAPI", "ThrowObjectToPlayer1", objectIndex);
+  }
+
+  function ThrowObjectToPlayer2(objectIndex) //Comes from frontend, goes to game
+  {
+    window.MyGameInstance.SendMessage("LanistaAPI", "ThrowObjectToPlayer2", objectIndex);
+  }
+
+  function LoadPlayer1IconUrl(url)
+  {
+    window.MyGameInstance.SendMessage("LanistaAPI", "LoadPlayer1IconUrl", url);
+  }
+
+  function LoadPlayer2IconUrl(url)
+  {
+    window.MyGameInstance.SendMessage("LanistaAPI", "LoadPlayer2IconUrl", url);
   }
 </script>
 
