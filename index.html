@@ -27,11 +27,11 @@
 	
       const hideFullScreenButton = "true";
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/0cbe0e1f5b4d42ff93327c77efbee2c2.loader.js";
+      const loaderUrl = buildUrl + "/0ce7ed3b7ad99018dc98cc9c71e42dc4.loader.js";
       const config = {
-        dataUrl: buildUrl + "/f92c4bcf5a4a3c871821a1ca29ae66fa.data.br",
-        frameworkUrl: buildUrl + "/464e74851cbc8ee29bf5ef6af36e6084.framework.js.br",
-        codeUrl: buildUrl + "/8ac6cc3c5078ee3e53abbef1f7832184.wasm.br",
+        dataUrl: buildUrl + "/10605279a9ccbdeb6161a725606ff96e.data.br",
+        frameworkUrl: buildUrl + "/37b41afa6cc1d523f4f5827bb5a723ce.framework.js.br",
+        codeUrl: buildUrl + "/5821a3f20fb8f06f9b995d69bb8ee656.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "KLIK",
         productName: "Lanista",
@@ -138,6 +138,13 @@
   function LoadPlayer2IconUrl(url)
   {
     window.MyGameInstance.SendMessage("LanistaAPI", "LoadPlayer2IconUrl", url);
+  }
+
+  function OnSimulationReady() //Comes from game, goes to frontend
+  {
+    // This function can be called from the game to notify the frontend that the simulation is ready.
+    // You can implement any logic here that should happen when the simulation is ready.
+    console.log("[Unity To HTML]Simulation is ready!");
   }
 </script>
 
